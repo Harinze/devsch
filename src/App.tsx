@@ -5,6 +5,8 @@ import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import Signup from './components/auth/Signup';
+import Login from './components/auth/Login';
 
 
 const toastStyle = {
@@ -26,6 +28,8 @@ const App = () => (
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </div>
