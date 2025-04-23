@@ -92,7 +92,7 @@ const Pricing = () => {
     );
   };
 
-  const handleBuy = async (title: string, price: number) => {
+  const handleBuy = async (_title: string, price: number) => {
     if (!isLoggedIn) {
       toast.error('Please log in first.');
       navigate('/login');
