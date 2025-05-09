@@ -6,6 +6,7 @@ import ServicesSection from '../components/home/ServicesSection';
 import Coreservices from '../components/home/CoreServices';
 import HeroSection from '../components/home/HeroSection';
 import CallToAction from '../components/home/CallToAction';
+import WhyChooseUs from '../components/home/WhyChooseUs';
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
     <div className="bg-white text-black">
     <Header />
     <HeroSection/>
+    <WhyChooseUs/>
    <ServicesSection/>
    <Coreservices/>
    <TestimonialSection/>

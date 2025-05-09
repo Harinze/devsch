@@ -1,32 +1,46 @@
-
 const Coreservices = () => {
-  
-
+  const services = [
+    {
+      title: 'Mentorship & Training',
+      description:
+        'Weekly 3-hour live sessions, hands-on assignments, personalized code reviews, career quizzes, algorithm practice, community support, and certificates — designed to make you job-ready.',
+      bg: 'bg-yellow-50',
+      icon: '🎓',
+    },
+    {
+      title: 'Custom Software Development',
+      description:
+        'We build scalable web apps: furniture ecommerce stores, marketing landing pages, school, church, and association websites, booking platforms, VTU and financial apps, healthcare solutions, and more.',
+      bg: 'bg-white',
+      icon: '🛠️',
+    },
+    {
+      title: 'Technology Consultancy',
+      description:
+        'We help businesses modernize with expert solutions — from integrating AI-powered resume validation to building seamless automated service delivery systems.',
+      bg: 'bg-yellow-50',
+      icon: '💡',
+    },
+  ];
 
   return (
- <div>
-     <section className="bg-gray-100 py-24 px-8 text-center">
-      <h2 className="text-4xl font-bold mb-6">Mentoring</h2>
-      <p className="text-lg md:text-xl max-w-3xl mx-auto">
-        Our mentoring services are designed to help you grow personally and professionally. Whether you're looking for one-on-one guidance or want to learn from a group, we have the right program for you.
-      </p>
+    <section className="py-24 px-6 md:px-16 bg-white">
+      <h2 className="text-4xl font-extrabold text-center mb-16 text-gray-800">
+        Our Core Services
+      </h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className={`${service.bg} rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center`}
+          >
+            <div className="text-5xl mb-6">{service.icon}</div>
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">{service.title}</h3>
+            <p className="text-gray-600">{service.description}</p>
+          </div>
+        ))}
+      </div>
     </section>
-
-    <section className="py-24 px-8 text-center">
-      <h2 className="text-4xl font-bold mb-6">Software Development</h2>
-      <p className="text-lg md:text-xl max-w-3xl mx-auto">
-        We build high-quality, scalable, and secure software tailored to meet your specific business requirements. Let us bring your ideas to life!
-      </p>
-    </section>
-
-   
-    <section className="bg-gray-100 py-24 px-8 text-center">
-      <h2 className="text-4xl font-bold mb-6">Technology Consultancy</h2>
-      <p className="text-lg md:text-xl max-w-3xl mx-auto">
-        Navigating the rapidly changing tech landscape can be challenging. Our consultancy services provide the insight and expertise to help your business stay ahead.
-      </p>
-    </section>
- </div>
   );
 };
 

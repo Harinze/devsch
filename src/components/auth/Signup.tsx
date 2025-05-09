@@ -5,7 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
-  const [form, setForm] = useState({ name: '', email: '', phone: '' });
+  const [form, setForm] = useState({ name: '', email: '', phone: '', password: '', role: ''});
   const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,6 +40,14 @@ const Signup = () => {
             name="name"
             placeholder="Full Name"
             value={form.name}
+            onChange={handleChange}
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          />
+            <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            value={form.password}
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
